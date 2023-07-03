@@ -12,12 +12,17 @@ while True:
         break
     else:
         print("Nieprawidłowy rozmiar.")
+
+        
 #N = 15 #size of the board
 LENGTH = 500//N #length of tile
 time.sleep(1)
 WIN = pygame.display.set_mode((LENGTH*N ,LENGTH*N)) #main window
 Qwhite = pygame.transform.scale(pygame.image.load("queenW.png"),(LENGTH,LENGTH))
 Qblack = pygame.transform.scale(pygame.image.load("queenB.png"),(LENGTH,LENGTH))
+
+pygame.display.set_caption("Evoulutionary algorithm")
+
 
 class Queen:
     def __init__(self,x=0,y=0):
